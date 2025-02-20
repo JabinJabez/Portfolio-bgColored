@@ -45,7 +45,7 @@ export default function Certificates() {
         <h2 className="text-3xl font-bold text-white text-center mb-6">My Certificates</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {certificates.map((cert, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105">
               <img src={cert.img} alt={cert.title} className="w-full h-56 object-cover" />
               <div className="p-4 text-center">
                 <h3 className="font-semibold">{cert.title}</h3>
