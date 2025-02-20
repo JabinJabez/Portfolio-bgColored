@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: scroll; /* Allows scrolling but hides scrollbar */
+  overflow-x: hidden;
+  background: linear-gradient(45deg, #bf3fcd, #00d5ff, #32a31e);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Hide scrollbar for all browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none;
+}
+
+.name {
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 800;
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  backdrop-filter: blur(10px); /* Optional for blurred background */
+  border-radius: 10px;
+}
+
+.glass-card {
+  width: 280px;
+  height: auto;
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.glass-card:hover {
+  transform: scale(1.05);
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  font-size: 14px;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
